@@ -18,16 +18,14 @@ p {
     opacity: 0;
     position: relative;
     left: 58px;
-    animation: appear 2s ease-in-out 4s forwards,
+    animation: appear 2s ease-in 1s forwards,
     moveLeft 2s ease-out 5s forwards,
     disappear 3s ease-out 13s forwards;
 }
 
 .secondSt {
     opacity: 0;
-    /* position: relative;
-    left: 10px; */
-    animation: appear 3s ease-out 1s forwards,
+    animation: appear 5s ease-in-out 4s forwards,
     disappear 3s ease-out 13s forwards;
 }
 
