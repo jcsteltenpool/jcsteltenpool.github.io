@@ -7,6 +7,7 @@
 
 :root {
     --cl-dark: #15304B;
+    --cl-darkest: #0d1b2a;
     --cl-light: #f3f3f3;
     --cl-blue: #2A6096;
     --cl-hover: #e08911;
@@ -14,16 +15,15 @@
     --cl-secondary: #4091E3;
     --cl-primary-hover: #AD6B0E;
     --cl-secondary-hover: #2A6096;
+    --cl-overlay: rgba(13, 27, 42, 0.92);
 
     --foreground: var(--cl-dark);
     --background: var(--cl-light);
 }
 
 .darkmode {
-    --cl-dark: #0d1b2a;
-
     --foreground: var(--cl-light);
-    --background: var(--cl-dark); 
+    --background: var(--cl-darkest); 
 }
 
 html {
@@ -290,45 +290,17 @@ nav {
 .project-container-1 {
     background: url("./resources/skate_centrale_600px.png");
 }
-.project-container-1:hover {
-    background: linear-gradient(rgba(13, 27, 42, 0.92), 
-    rgba(13, 27, 42, 0.92)),
-    url("./resources/skate_centrale_600px.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
 
 .project-container-2 {
     background: url("./resources/1000_bommen_600px.png");
-}
-.project-container-2:hover {
-    background: linear-gradient(rgba(13, 27, 42, 0.92), 
-    rgba(13, 27, 42, 0.92)),
-    url("./resources/1000_bommen_600px.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .project-container-3 {
     background: url("./resources/how_long_600px.png");
 }
-.project-container-3:hover {
-    background: linear-gradient(rgba(13, 27, 42, 0.92), 
-    rgba(13, 27, 42, 0.92)),
-    url("./resources/how_long_600px.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .project-container-4 {
     background: url("./resources/Fotomatic_600px.png");
-}
-.project-container-4:hover {
-    background: linear-gradient(rgba(13, 27, 42, 0.92), 
-    rgba(13, 27, 42, 0.92)),
-    url("./resources/Fotomatic_600px.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .project-description {
@@ -340,11 +312,28 @@ nav {
     color: var(--cl-light);
 }
 
-
-
 .project-text {
     font-size: 0.8rem;
     text-align: start;
+}
+
+@media (hover:hover) {
+    .project-container-1:hover {
+        background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
+        url("./resources/skate_centrale_600px.png");
+    }
+    .project-container-2:hover {
+        background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
+        url("./resources/1000_bommen_600px.png");
+    }
+    .project-container-3:hover {
+        background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
+        url("./resources/how_long_600px.png");
+    }
+    .project-container-4:hover {
+        background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
+        url("./resources/Fotomatic_600px.png");
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -358,10 +347,6 @@ nav {
         font-size: 0.9rem;
         text-align: start;
     }
-    
-    .projects-container {
-        padding-bottom: 0;
-    }
 
     .projects-container-scroll {
         display: block; 
@@ -374,9 +359,9 @@ nav {
         background: var(--cl-dark);
     }
 
-    .project-container:hover {
+    /* .project-container:hover {
        background: var(--cl-dark); 
-    }
+    } */
 
     .project-description {
         opacity: 1;
@@ -387,7 +372,8 @@ nav {
         display: block;
         border-radius: 0.25rem;
         width: 100%;
-        box-shadow: 0 0 15px var(--cl-dark);    }
+        box-shadow: 0 0 15px var(--cl-darkest);    
+    }
 
     @media (prefers-color-scheme: dark) {
         .project-container {
