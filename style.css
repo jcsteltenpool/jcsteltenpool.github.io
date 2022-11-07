@@ -108,6 +108,12 @@ section {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    h3 {
+        text-align: center;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     @media (prefers-color-scheme: dark) {
         :root {
@@ -118,7 +124,7 @@ section {
         }   
     }
 
-    h2, h3 {
+    h2 {
         text-align: center;
     }
     .portrait {
@@ -376,7 +382,6 @@ nav {
     h3 {
         margin: 0.5rem 0 1rem 0;
         font-weight: 600;
-        text-transform: uppercase;
     }
 
     .project-text {
