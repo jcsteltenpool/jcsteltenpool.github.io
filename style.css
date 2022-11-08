@@ -8,7 +8,7 @@
 :root {
     --cl-dark: #15304B;
     --cl-darkest: #0d1b2a;
-    --cl-light: #f3f3f3;
+    --cl-light: #e9e9e9;
     --cl-blue: #2A6096;
     --cl-hover: #e08911;
     --cl-primary: #e08911;
@@ -17,11 +17,13 @@
     --cl-secondary-hover: #2A6096;
     --cl-overlay: rgba(13, 27, 42, 0.92);
 
+    --bg-container: var(--cl-blue);
     --foreground: var(--cl-dark);
     --background: var(--cl-light);
 }
 
 .darkmode {
+    --bg-container: var(--cl-dark);
     --foreground: var(--cl-light);
     --background: var(--cl-darkest); 
 }
@@ -100,30 +102,23 @@ section {
     font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 768px) {
-    .portrait-large {
-        position: relative;
-        top: 2rem;
-        width: clamp(250px, 35vw, 300px);
-    }
-}
 
 @media only screen and (max-width: 1024px) {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --foreground: var(--cl-light);
+            --background: var(--cl-darkest);
+        }   
+    }
+    
     h3 {
         text-transform: uppercase;
         text-align: center;
     }
 }
 
+
 @media only screen and (max-width: 600px) {
-    @media (prefers-color-scheme: dark) {
-        :root {
-
-            --foreground: var(--cl-light);
-            --background: var(--cl-darkest);
-        }   
-    }
-
     h2 {
         text-align: center;
     }
@@ -228,13 +223,17 @@ nav {
     left: 13px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .toggle-container {
+        display: none;
+    }
+}
 @media only screen and (max-width: 600px) {
     nav {
         justify-content: space-between;
         padding: 0.5rem 0;
     }
-    .nav-container,
-    .toggle-container {
+    .nav-container {
         display: none;
     }
 
@@ -270,6 +269,14 @@ nav {
     width: 300px;
     box-shadow: 5px 5px var(--cl-primary),
                 -5px -5px var(--cl-secondary-hover);
+}
+
+@media only screen and (max-width: 768px) {
+    .portrait-large {
+        position: relative;
+        top: 2rem;
+        width: 35vw;
+    }
 }
 
 /* =============== PROJECTS ============== */
@@ -348,7 +355,7 @@ nav {
 
 @media only screen and (max-width: 1024px) {
     .project-container {
-        background: var(--cl-dark);
+        background: var(--bg-container);
         width: 60vw;
         height: auto;
     }
@@ -372,8 +379,8 @@ nav {
 
     @media (prefers-color-scheme: dark) {
         .project-container {
+            background: var(--cl-dark);
             border: 1px solid var(--cl-blue);
-            /* background: #15304B; */
         }
     }
 }
@@ -397,7 +404,16 @@ nav {
         width: 100%;
         height: auto;
         margin-bottom: 1rem;
-        background: var(--cl-dark);
+    }
+
+    button {
+        font-size: 1rem;
+        margin: 0.8rem;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -406,7 +422,6 @@ nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
     padding-bottom: 1rem;
 }
 
@@ -416,10 +431,6 @@ nav {
     aspect-ratio: 1 / 1;
     margin-top: .5rem;
 }
-
-/* .icon-container:last-child {
-    margin-right: 0;
-} */
 
 .icon {
     width: 100%;
@@ -434,9 +445,10 @@ nav {
     display: flex;
     flex-flow: column;
     border-radius: 0.25rem;
+    border: 1px solid var(--cl-blue);
     padding: 1rem;
     color: var(--cl-light);
-    background: var(--cl-blue);
+    background: var(--bg-container);
 }
 
 .contact-container div {
@@ -454,6 +466,15 @@ nav {
     margin-right: 0.8rem;
     transition: 0.5s;
     fill: var(--cl-light);
+}
+
+@media only screen and (hover:none) {
+    @media (prefers-color-scheme: dark) {
+        .contact-container {
+            background-color: var(--cl-dark);
+            border: 1px solid var(--cl-blue);
+        }
+    }
 }
 
 
