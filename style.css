@@ -103,6 +103,9 @@ section {
 }
 
 @media only screen and (hover: none) {
+    section {
+        padding-top: 3rem;
+    }
     @media (prefers-color-scheme: dark) {
         :root {
             --foreground: var(--cl-light);
