@@ -386,38 +386,40 @@ nav {
             border: 1px solid var(--cl-blue);
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        h3 {
+            margin: 0.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+    
+        .project-text {
+            font-size: 0.9rem;
+        }
+    
+        .projects-container-scroll {
+            display: block; 
+        }
+    
+        .project-container {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    
+        button {
+            font-size: 1rem;
+            margin: 0.8rem;
+        }
+    
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
 
-@media only screen and (max-width: 600px) {
-    h3 {
-        margin: 0.5rem 0 1rem 0;
-        font-weight: 600;
-    }
 
-    .project-text {
-        font-size: 0.9rem;
-    }
-
-    .projects-container-scroll {
-        display: block; 
-    }
-
-    .project-container {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-    }
-
-    button {
-        font-size: 1rem;
-        margin: 0.8rem;
-    }
-
-    .button-container {
-        display: flex;
-        justify-content: center;
-    }
-}
 
 /* SKILLS */
 .skills-container {
