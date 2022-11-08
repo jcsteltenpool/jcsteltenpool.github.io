@@ -298,6 +298,9 @@ nav {
 }
 
 .project-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 0.8rem;
     line-height: 1.5rem;
     height: 300px;
@@ -359,13 +362,16 @@ nav {
 @media only screen and (hover: none) {
     .project-container {
         background: var(--bg-container);
-        width: 60vw;
+        width: min(600px, 60vw);
         height: auto;
     }
 
     .project-description {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
         opacity: 1;
-        height: auto;
+        height: 575px;
     }
 
     .project-image {
@@ -387,12 +393,23 @@ nav {
         }
     }
 
-    @media only screen and (max-width: 600px) {
-        h3 {
-            margin: 0.5rem 0 1rem 0;
-            font-weight: 600;
+    @media only screen and (max-width: 1024px) {
+        .project-description {
+            min-height: auto;
+            height: clamp(550px, 60vw, 575px);
         }
-    
+    }
+
+    @media only screen and (max-width: 768px) {
+        .project-description {
+            height: 528px;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .project-description {
+            height: auto;
+        }
+
         .project-text {
             font-size: 0.9rem;
         }
