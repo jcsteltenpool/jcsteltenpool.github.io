@@ -112,14 +112,15 @@ section {
             --background: var(--cl-darkest);
         }   
     }
-}
 
-@media only screen and (max-width: 1024px) {
-    h3 {
-        text-transform: uppercase;
-        text-align: center;
+    @media only screen and (max-width: 1024px) {
+        h3 {
+            text-transform: uppercase;
+            text-align: center;
+        }
     }
 }
+
 
 
 @media only screen and (max-width: 600px) {
