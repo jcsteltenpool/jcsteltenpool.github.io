@@ -317,7 +317,7 @@ nav {
 }
 
 .project-container-4 {
-    background: url("./resources/Fotomatic_600px.png");
+    background: url("./resources/portfolio_600px.png");
 }
 
 .project-description {
@@ -332,6 +332,10 @@ nav {
 .project-text {
     font-size: 0.8rem;
     text-align: start;
+}
+
+.slash {
+    color: var(--cl-primary);
 }
 
 @media (hover:hover) {
@@ -349,7 +353,7 @@ nav {
     }
     .project-container-4:hover {
         background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
-        url("./resources/Fotomatic_600px.png");
+        url("./resources/portfolio_600px.png");
     }
 }
 
