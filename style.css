@@ -102,15 +102,16 @@ section {
     font-size: 0.8rem;
 }
 
-
-@media only screen and (max-width: 1024px) {
+@media (hover:none) {
     @media (prefers-color-scheme: dark) {
         :root {
             --foreground: var(--cl-light);
             --background: var(--cl-darkest);
         }   
     }
-    
+}
+
+@media only screen and (max-width: 1024px) {
     h3 {
         text-transform: uppercase;
         text-align: center;
@@ -139,10 +140,6 @@ section {
 
     a:hover {
         color: var(--cl-hover);
-    }
-
-    .project-description:hover {
-        opacity: 1;
     }
 
     #contact .icon:hover {
@@ -223,7 +220,7 @@ nav {
     left: 13px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (hover:none) {
     .toggle-container {
         display: none;
     }
@@ -241,7 +238,7 @@ nav {
         display: block;
         width: 5rem;
         box-shadow: 2px 2px var(--cl-primary),
-                    -2px -2px var(--cl-secondary-hover);
+                    -2px -2px var(--cl-blue);
     }
 
     .portrait-large {
@@ -268,7 +265,7 @@ nav {
 .portrait-large {
     width: 300px;
     box-shadow: 5px 5px var(--cl-primary),
-                -5px -5px var(--cl-secondary-hover);
+                -5px -5px var(--cl-blue);
 }
 
 @media only screen and (max-width: 768px) {
@@ -300,28 +297,7 @@ nav {
     background-repeat: no-repeat;
 }
 
-.project-image-mobile {
-    display: none;
-}
-
-.project-container-1 {
-    background: url("./resources/skate_centrale_600px.png");
-}
-
-.project-container-2 {
-    background: url("./resources/1000_bommen_600px.png");
-}
-
-.project-container-3 {
-    background: url("./resources/how_long_600px.png");
-}
-
-.project-container-4 {
-    background: url("./resources/portfolio_600px.png");
-}
-
 .project-description {
-    opacity: 0;
     font-size: 0.8rem;
     line-height: 1.5rem;
     height: 300px;
@@ -329,16 +305,31 @@ nav {
     color: var(--cl-light);
 }
 
-.project-text {
-    font-size: 0.8rem;
-    text-align: start;
-}
-
 .slash {
     color: var(--cl-primary);
 }
 
 @media (hover:hover) {
+    .project-image {
+        display: none;
+    }
+
+    .project-container-1 {
+        background: url("./resources/skate_centrale_600px.png");
+    }
+    
+    .project-container-2 {
+        background: url("./resources/1000_bommen_600px.png");
+    }
+    
+    .project-container-3 {
+        background: url("./resources/how_long_600px.png");
+    }
+    
+    .project-container-4 {
+        background: url("./resources/portfolio_600px.png");
+    }
+    
     .project-container-1:hover {
         background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
         url("./resources/skate_centrale_600px.png");
@@ -355,9 +346,17 @@ nav {
         background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
         url("./resources/portfolio_600px.png");
     }
+
+    .project-description {
+        opacity: 0;
+    }
+
+    .project-description:hover {
+        opacity: 1;
+    }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (hover:none) {
     .project-container {
         background: var(--bg-container);
         width: 60vw;
@@ -369,7 +368,7 @@ nav {
         height: auto;
     }
 
-    .project-image-mobile {
+    .project-image {
         display: block;
         border-radius: 0.25rem;
         width: 100%;
@@ -397,7 +396,6 @@ nav {
 
     .project-text {
         font-size: 0.9rem;
-        text-align: start;
     }
 
     .projects-container-scroll {
