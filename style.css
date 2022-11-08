@@ -102,7 +102,7 @@ section {
     font-size: 0.8rem;
 }
 
-@media (hover:none) {
+@media only screen and (hover: none) {
     @media (prefers-color-scheme: dark) {
         :root {
             --foreground: var(--cl-light);
@@ -129,7 +129,7 @@ section {
     }
 }
 
-@media (hover: hover) {
+@media only screen and (hover: hover) {
     .button-primary:hover {
         background-color: var(--cl-primary-hover);
     }
@@ -309,7 +309,7 @@ nav {
     color: var(--cl-primary);
 }
 
-@media (hover:hover) {
+@media only screen and (hover: hover) {
     .project-image {
         display: none;
     }
@@ -356,7 +356,7 @@ nav {
     }
 }
 
-@media only screen and (hover:none) {
+@media only screen and (hover: none) {
     .project-container {
         background: var(--bg-container);
         width: 60vw;
