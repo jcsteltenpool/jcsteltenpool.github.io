@@ -20,7 +20,7 @@
     --cl-overlay: rgba(42, 96, 150, 0.95);
 
     --bg-container: var(--cl-blue);
-    --bg-border: var(--cl-light);
+    --bg-border: var(--cl-blue);
     --foreground: var(--cl-dark);
     --background: var(--cl-light);
 }
@@ -346,7 +346,9 @@ nav {
     }
 
     .project-container {
-        border: 1px solid var(--background);
+        margin: 0.5rem;
+        box-shadow: 0 0 0.5rem var(--cl-darkest);
+        /* border: 1px solid var(--background); */
     }
     .project-container:hover {
         border: 1px solid var(--bg-border);
