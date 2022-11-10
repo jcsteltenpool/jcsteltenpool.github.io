@@ -348,8 +348,8 @@ nav {
     .project-container {
         margin: 0.5rem;
         box-shadow: 0 0 0.5rem var(--cl-darkest);
-        /* border: 1px solid var(--background); */
     }
+
     .project-container:hover {
         border: 1px solid var(--bg-border);
     }
