@@ -369,7 +369,7 @@ nav {
     }
     
     .project-container-4 {
-        background: url("./resources/portfolio_600px.png");
+        background: url("./resources/Theaterbazen_600px.png");
     }
     
     .project-container-1:hover {
@@ -386,7 +386,7 @@ nav {
     }
     .project-container-4:hover {
         background: linear-gradient(var(--cl-overlay), var(--cl-overlay)),
-        url("./resources/portfolio_600px.png");
+        url("./resources/Theaterbazen_600px.png");
     }
 
     .project-description {
@@ -477,13 +477,13 @@ nav {
 /* SKILLS */
 .skills-container {
     display: flex;
-    width: 100%;
+    max-width: 500px;
     justify-content: space-between;
     padding-bottom: 1rem;
 }
 
 .icon-container {
-    width: 6rem;
+    width: 5rem;
     margin: 0.5rem;
     aspect-ratio: 1 / 1;
     margin-top: .5rem;
@@ -493,6 +493,12 @@ nav {
     width: 100%;
     height: 100%;
     fill: var(--foreground);
+}
+
+@media only screen and (max-width: 600px) {
+    .skills-container {
+        max-width: 100%;
+    }
 }
 
 
